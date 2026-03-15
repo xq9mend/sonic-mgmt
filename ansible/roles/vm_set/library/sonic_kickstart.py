@@ -59,8 +59,11 @@ class SerialSession(object):
             index = self.pair(user, [r'assword:', r'\$', r'\#'])
             if index == 0:
                 index = self.pair(password, [r'login:', r'\$', r'\#'])
-                if index == 1:
+                if index == 1 or index == 2:
                     break
+            elif index == 1 or index == 2:
+                # No password prompt — empty password, shell came up directly
+                break
 
         return
 

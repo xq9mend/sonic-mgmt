@@ -15,6 +15,7 @@ cisco_password: "password"
 
 sonic_login: "admin"
 sonic_default_passwords:
+ - ""
  - "YourPaSsWoRd"
  - "password"
  - "admin"
